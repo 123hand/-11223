@@ -1,0 +1,14 @@
+body {
+  background: #f5f6fa;
+  font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+}
+.app-container {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #e0e0e0;
+  padding: 32px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 32px;
+}
