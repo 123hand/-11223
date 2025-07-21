@@ -1,0 +1,211 @@
+星火大模型X1 http接口
+上线时间：2025.04.15
+X1模型进一步升级，在原来数学任务国内领先基础上，推理、文本生成、语言理解等通用任务实现效果对标OpenAI o1和DeepSeek R1。技术咨询可直接提交工单
+
+#1、请求地址
+深度推理模型Spark X1 API已开放，可领取授权体验，立即领取>>
+
+使用HTTP方式调用推理模型的请求地址:
+
+https://spark-api-open.xf-yun.com/v2/chat/completions
+兼容openAI SDK:
+
+base_url 需要配置为:https://spark-api-open.xf-yun.com/v2/
+#2、请求示例
+#2.1 示例demo
+请求示例：兼容openAI SDK
+
+请求示例：Python demo
+
+请求示例：Java demo
+
+兼容openAI SDK，请求示例
+
+鉴权说明： 鉴权使用http协议的APIpassword在控制台 获取
+
+import os
+from openai import OpenAI
+import openai
+
+
+client = OpenAI(
+    # x1 
+    api_key="AK:SK", # 两种方式：1、http协议的APIpassword； 2、ws协议的apikey和apisecret 按照ak:sk格式拼接；
+    base_url="https://spark-api-open.xf-yun.com/v2",
+)
+
+# stream_res = True
+stream_res = False
+
+
+stream = client.chat.completions.create(
+    messages=[
+          {
+            "role": "user",
+            "content": "你好"
+        },
+
+    ],
+
+    model="x1",
+    stream=stream_res,
+    user="123456",
+
+)
+full_response = ""
+
+if not stream_res:
+    print(stream.to_json())
+else:
+    for chunk in stream:
+        if hasattr(chunk.choices[0].delta, 'reasoning_content') and chunk.choices[0].delta.reasoning_content is not None:
+            reasoning_content = chunk.choices[0].delta.reasoning_content
+            print(reasoning_content, end="", flush=True)  # 实时打印思考模型输出的思考过程每个片段
+        
+        if hasattr(chunk.choices[0].delta, 'content') and chunk.choices[0].delta.content is not None:
+            content = chunk.choices[0].delta.content
+            print(content, end="", flush=True)  # 实时打印每个片段
+            full_response += content
+    
+    print("\n\n ------完整响应：", full_response)   
+
+#2.2请求说明
+请求头
+
+    {
+        "Authorization" :"Bearer XXXXXXXXXXXXXX",  // 请替换XXXXXXXXXX为您的 APIpassword, 获取地址：https://console.xfyun.cn/services/bmx1
+        "content-type"  : "application/json"
+    }
+请求体
+
+{
+    "model": "x1",
+    "user": "user_id",
+    "messages": [
+        {
+            "role": "user",
+            "content": "推荐两个国内适合自驾的景点"
+        }
+    ],
+    // 下面是可选参数
+    "stream": true,
+    "tools": [
+        {
+            "type": "web_search",
+            "web_search": {
+                "enable": true,
+            	"search_mode":"deep"
+            }
+        }
+    ]
+}
+#2.3请求参数
+名称	类型	是否必传	描述
+model	string	是	x1
+user	string	否	用户的唯一id，表示一个用户，user_123456
+messages	array	是	输入数组
+messages.role	string	是	角色，user表示用户，assistant表示大模型，system表示命令
+messages.content	string	是	角色对应的文本内容
+temperature	float	否	核采样阈值 取值范围（0, 2] 默认值1.2
+top_p	int	否	生成过程中核采样方法概率阈值，例如，取值为0.8时，仅保留概率加起来大于等于0.8的最可能token的最小集合作为候选集。取值越大，生成的随机性越高；取值越低，生成的确定性越高。 取值范围(0, 1] 默认值0.95
+top_k	int	否	从k个中随机选择一个(非等概率) 取值范围[1, 6] 默认值6
+presence_penalty	float	否	重复词的惩罚值 取值范围[-2.0,10] 默认2.01 repeat_punish
+frequency_penalty	float	否	频率惩罚值 取值范围[-2.0,10] 默认0.001
+stream	bool	否	是否流式返回结果。默认是false 表示非流式。 如果使用流式，服务端使用SSE的方式推送结果，客户端自己适配处理结果。
+keep_alive	bool	否	是否开启非流式请求保活。默认是false 表示不开启。 如果开启，服务端会定时发送空行，直至所有结果返回。需要客户端自己处理空行。
+max_tokens	int	否	大模型输出信息的token上限，取值范围[1,32768] 默认值32768
+tools	array Optional	否	模型可能会调用的 tool 的列表
+tools.web_search	object	否	{"type":"web_search","web_search":{"enable":true,"search_mode":"deep/normal"}}
+enable 开关表示是否开启搜索功能
+search_mode开启搜索时支持选择搜索模式deep or normal ，deep模式搜索内容更丰富 token使用量更高 默认为normal模式
+#3、响应说明
+#3.1 流式响应
+流式返回包含一系列 chat completion chunk 对象的流式输出：
+
+data:{"code":0,"message":"Success","sid":"cha00010012@dx196374b0be83b4e302","id":"cha00010012@dx196374b0be83b4e302","created":1744684388,"choices":[{"delta":{"role":"assistant","reasoning_content":"用户希望推荐"},"index":0}]}  
+{"code":0,"message":"Success","sid":"cha00010012@dx196374b0be83b4e302","id":"cha00010012@dx196374b0be83b4e302","created":1744684388,"choices":[{"delta":{"role":"assistant","reasoning_content":"两个国内适合自"},"index":0}]}
+{"code":0,"message":"Success","sid":"cha00010012@dx196374b0be83b4e302","id":"cha00010012@dx196374b0be83b4e302","created":1744684388,"choices":[{"delta":{"role":"assistant","reasoning_content":"驾的景点。"},"index":0}]}
+……
+{"code":0,"message":"Success","sid":"cha00010018@dx1963754b1223b4e302","id":"cha00010018@dx1963754b1223b4e302","created":1744685020,"choices":[{"delta":{"role":"assistant","reasoning_content":"需要隐藏的思考内容”","security_suggest":{"action":"HIDE_CONTINUE"}},"index":0}]}
+……
+
+data:{"code":0,"message":"Success","sid":"cha00010012@dx196374b0be83b4e302","id":"cha00010012@dx196374b0be83b4e302","created":1744684408,"choices":[{"delta":{"role":"assistant","content":"以下是两个国内适合自驾"},"index":0}]}
+{"code":0,"message":"Success","sid":"cha00010012@dx196374b0be83b4e302","id":"cha00010012@dx196374b0be83b4e302","created":1744684408,"choices":[{"delta":{"role":"assistant","content":"的景点推荐，结合自然风光、"},"index":0}]}
+
+......
+{"code":0,"message":"Success","sid":"cha00010016@dx19637530c823b4e302","id":"cha00010016@dx19637530c823b4e302","created":1744684966,"choices":[{"delta":{"role":"assistant","content":"参考！"},"index":0}],"usage":{"prompt_tokens":10549,"completion_tokens":1250,"search_prompt_tokens":10541,"total_tokens":11799}}
+
+data:[DONE]
+
+响应的参数说明：
+
+名称	类型	描述
+code	int	错误码：0表示成功，非0表示错误
+message	string	错误码的描述信息
+sid	string	本次请求的唯一id
+choices	array	大模型结果的数组
+choices.delta	object	大模型结果
+choices.delta.role	string	大模型的角色
+choices.delta.reasoning_content	string	仅适用于 reasoner 模型。内容为assistant 消息中在最终答案之前的推理内容
+choices.message.security_suggest	object	
+choices.message.security_suggest.action	string	审核建议操作。HIDE_CONTINUE：建议隐藏该内容
+choices.delta.content	string	大模型输出的内容
+choices.index	int	大模型的结果序号，在多候选中使用
+usage	object	本次请求消耗的token数量
+usage.prompt_tokens	int	用户输入信息，消耗的token数量
+usage.search_prompt_tokens	int	deep搜索模式下，会返回这个key，代表搜索膨胀的token
+usage.completion_tokens	int	大模型输出信息，消耗的token数量
+usage.total_tokens	int	用户输入+大模型输出，总的token数量
+#3.2 非流式响应
+非流式返回一个 chat completion 对象：
+
+{
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "content": "根据搜索结果，以下是两个国内适合自驾的景点推荐，结合自然风光、路况体验及文化特色综合筛选：\n\n### 一、**四川阿坝州九寨沟**  \n- **推荐理由**：  \n  - 九寨沟以其独特的山水景观闻名，被誉为“人间仙境”。自驾可深度 感受川西高原的壮美风光，沿途还能体验藏羌风情。  \n  - 路线成熟，道路基础设施完善，适合不同驾驶水平的旅行者。秋季红叶与碧湖相映，冬季雪景静谧，四季皆景。  \n  - 周边可联动川西大环线，顺路游览黄龙、四姑娘山等景点，行程丰富且灵活。  \n\n### 二、**云南文山坝美村**  \n- **推荐理由**：  \n  - 坝美村是现实中的“世外桃源”，需乘船穿越石灰岩溶洞才能进入村庄，四周青山环绕，河流清澈，田园风光原始淳朴。  \n  - 自驾可直达村落，路况以山路为主，适合喜欢小众探秘和慢节奏旅行的游客。夏季夜晚还可体验“鸳鸯河”畔的露天浴场，感受独特民俗。  \n  - 路线难度较低，适合家庭出行或短途自驾，且游客密度相对较小，保留较多原生态气息。  \n\n### 附注意事项\n- **九寨沟**：建议选择秋季（9-10月）或春季（4-5月）前往，避开旅游高峰期；需注意高原反应，提前备好车辆防滑设备。  \n- **坝美村**：最佳季节为夏秋，雨后村落烟雾缭绕，宛如画中；村内需步行或乘船，建议轻便着装。  \n\n这两个景点均兼具自然风光与文化特色，且自驾路线成熟，能覆盖从轻松休闲到轻度探 险的不同需求。",
+        "role": "assistant",
+        "reasoning_content": "\n\n用户想要两个国内适合自驾的景点推荐。这需要我了解国内适合自驾的景点，并从中挑选出两个较为合适的。同时，要考虑到用户的自驾需求，比如路况、风景、行程安排等因素。\n\n现在，我将使用联网搜索工具搜索国 内适合自驾的景点，然后从中推荐两个。\n\n首先，看看各个网页的信息。网页1提到了中国十大自驾游景点，比如九寨沟、千岛湖、青海湖、喀纳斯、敦煌莫高窟、天山天池、布达拉宫等，但内容好像没完整显示，可能被截断了。不过这几个地方都是比较有名的自驾路线上的景点，应该可以考虑。\n\n网页2和网页4时间不同，但内容看起来相似，都是盘点10条国内最适合自驾的路线，集中在西南、西北和内蒙，难度系数不同。其中提到的云南贵州内蒙三颗星，川藏北疆四颗星，阿里大北线和丙察察线五颗星。这说 明这些地方适合不同驾驶水平的自驾爱好者。\n\n网页3推荐了8条绝美自驾路线，比如坝美村，描述得很详细，说是世外桃源，还有鸳鸯河，听起来很有特色。不过时间较早，是2018年的，可能信息需要结合其他网页更新。\n\n网页5是2020年的，盘点了8个适 合自驾的城市，第一个就是四川阿坝州，提到九寨沟，和网页1呼应。看来九寨沟确实是个热门推荐。\n\n现在，我需要从这些信息中选出两个景点。考虑到用户要的是“景点”而非整个路线，可能需要选具体的地方，而不是大范围的路线。比如九寨沟、坝美村这样具体的地方，或者像青海湖、千岛湖这样的明确地点。\n\n网页1提到的九寨沟在自驾路线上，网页5也重点推荐了四川阿坝州，特别是九寨沟，说明这里非常适合自驾，风景优美，应该是一个不错的选择。另外，网页3提到的坝美村，属于云南，被称为世外桃源，有独特的自然景观，可能也是一个好推荐。\n\n再考虑其他网页有没有其他推荐。网页2和4提到的川藏线、新疆大环线、青海湖等，但用户要的是两个景点，可能需要更具体的点。比如青海湖可能是一个，但网页1里提到青海湖在青藏线上，可能更适合路线推荐。而坝美村在网页3里描述得很细致，有特色，适合作为其中一个推荐。\n\n另外，网页5里的四川阿坝州包含九寨沟，可能可以合并到九寨沟作为推荐。所以第一个推荐可以是四川九寨沟，第二个是云南坝美村。这两个地方分别在不同的省份，各有特色， 且都被搜索结果提到，符合用户需求。\n\n再检查时间因素，网页5是2020年的，网页4是2023年的，可能更近期的信息更准确。但坝美村在网页3是2018年的，可能依然有效，因为景点本身的特点不会变。九寨沟在多个网页中被提及，尤其是网页5，说明其持续 受欢迎。\n\n所以最终决定推荐两个景点：四川九寨沟和云南坝美村。"
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1175,
+    "prompt_tokens": 8,
+    "total_tokens": 1183
+  },
+  "code": 0,
+  "message": "Success",
+  "sid": "cha00010010@dx19637483ed53b4e302",
+  "status": "complete"
+}
+响应的参数说明：
+
+名称	类型	描述
+code	int	错误码：0表示成功，非0表示错误
+message	string	错误码的描述信息
+sid	string	本次请求的唯一id
+choices	array	大模型结果的数组
+choices.message	object	大模型结果
+choices.message.role	string	大模型的角色
+choices.message.content	string	大模型输出的内容
+choices.message.reasoning_content	string	仅适用于 reasoner 模型。内容为assistant 消息中在最终答案之前的推理内容
+choices.index	int	大模型的结果序号，在多候选中使用
+usage	object	本次请求消耗的token数量
+usage.prompt_tokens	int	用户输入信息，消耗的token数量
+usage.search_prompt_tokens	int	deep搜索模式下，会返回这个key，代表搜索膨胀的token
+usage.completion_tokens	int	大模型输出信息，消耗的token数量
+usage.total_tokens	int	用户输入+大模型输出，总的token数量
+#4、错误码说明
+错误码	错误信息
+0	成功
+10007	用户流量受限：服务正在处理用户当前的问题，需等待处理完成后再发送新的请求。（必须要等大模型完全回复之后，才能发送下一个问题）
+10013	输入内容审核不通过，涉嫌违规，请重新调整输入内容
+10014	输出内容涉及敏感信息，审核不通过，后续结果无法展示给用户
+10019	表示本次会话内容有涉及违规信息的倾向；建议开发者收到此错误码后给用户一个输入涉及违规的提示
+10907	token数量超过上限。对话历史+问题的字数太多，需要精简输入
+11200	授权错误：该appId没有相关功能的授权 或者 业务量超过限制
+11201	授权错误：日流控超限。超过当日最大访问量的限制
+11202	授权错误：秒级流控超限。秒级并发超过授权路数限制
+11203	授权错误：并发流控超限。并发路数超过授权路数限制

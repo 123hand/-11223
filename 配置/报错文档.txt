@@ -1,0 +1,566 @@
+(.venv) PS F:\软件杯> python app.py
+2025-06-10 16:53:02,290 - INFO - 主程序启动。
+2025-06-10 16:53:02,809 - INFO - PyAudio 音频输入流已开启。
+2025-06-10 16:53:02,809 - INFO - ASR 客户端初始化完成。
+2025-06-10 16:53:02,810 - INFO - ASR 客户端初始化完成。
+2025-06-10 16:53:02,810 - INFO - Spark 客户端初始化完成。
+2025-06-10 16:53:02,810 - INFO - XfyunTTSClient 内部初始化 PyAudio。
+2025-06-10 16:53:02,810 - INFO - 正在尝试连接 TTS WebSocket...
+2025-06-10 16:53:03,000 - INFO - Websocket connected
+2025-06-10 16:53:03,000 - INFO - TTS WebSocket 连接已打开。
+2025-06-10 16:53:03,034 - INFO - TTS WebSocket 连接成功。
+2025-06-10 16:53:03,034 - INFO - TTS 客户端初始化完成。
+2025-06-10 16:53:03,034 - INFO - TTS 客户端初始化完成。
+2025-06-10 16:53:03,034 - INFO - VoiceAnalyzer 初始化完成。
+2025-06-10 16:53:03,034 - INFO - VoiceAnalyzer 初始化完成。
+2025-06-10 16:53:05,479 - INFO - 摄像头 0 已开启，实际分辨率: (640, 480), 实际帧率: 30.00 FPS。
+2025-06-10 16:53:05,479 - INFO - VideoProcessor 初始化完成并尝试启动摄像头。
+2025-06-10 16:53:05,480 - INFO - InterviewLogic 初始化完成。
+2025-06-10 16:53:05,480 - INFO - InterviewLogic 初始化完成。
+2025-06-10 16:53:05,480 - INFO - Connecting to ASR URL: wss://iat-api.xfyun.cn/v2/iat?host=iat-api.xfyun.cn&date=Tue%2C+10+Jun+2025+08%3A53%3A05+GMT&authorization=YXBpX2tleT0iYzg5MjQ1NDMwYzg5ZmNiMWQ2MTExNzI1ZGZjN2Y0Y2EiLCBhbGdvcml0aG09ImhtYWMtc2hhMjU2IiwgaGVhZGVycz0iaG9zdCBkYXRlIHJlcXVlc3QtbGluZSIsIHNpZ25hdHVyZT0iaDViMjM5emQ1SzBiRkFzUnM4RzRWZmRaQmRLeGM5akJGbWV4UzAyb0hpbz0i
+2025-06-10 16:53:05,480 - INFO - Waiting for ASR client to connect...
+2025-06-10 16:53:05,674 - INFO - Websocket connected
+2025-06-10 16:53:05,674 - INFO - ASR WebSocket opened.
+2025-06-10 16:53:05,691 - INFO - ASR client connected successfully.
+2025-06-10 16:53:05,691 - INFO - TTS WebSocket 已经连接。
+2025-06-10 16:53:05,691 - INFO - 音频输入线程已启动。
+2025-06-10 16:53:05,691 - INFO - 音频输入线程启动。
+2025-06-10 16:53:05,692 - INFO - ASR 结果处理线程启动。
+2025-06-10 16:53:05,692 - DEBUG - RMS: 0.47, Current dB: -96.91
+2025-06-10 16:53:05,692 - INFO - ASR 结果处理线程启动。
+2025-06-10 16:53:05,692 - INFO - 视频录制已启动到文件: video_records\interview_20250610_165305.mp4
+2025-06-10 16:53:05,695 - INFO - 开始面试流程...
+2025-06-10 16:53:05,695 - INFO - 面试逻辑线程启动。
+2025-06-10 16:53:05,695 - INFO - 面试官：您好，欢迎参加本次面试。请先进行简单的自我介绍。
+2025-06-10 16:53:05,695 - INFO - 请求 TTS 合成文本: '您好，欢迎参加本次面试。请先进行简单的自我介绍。'
+2025-06-10 16:53:05,695 - INFO - 开始合成文本: '您好，欢迎参加本次面试。请先进行简单的自我介绍。'
+2025-06-10 16:53:05,696 - INFO - TTS 文本合成请求已发送。
+2025-06-10 16:53:05,696 - INFO - TTS 播放完成。
+2025-06-10 16:53:05,696 - INFO - 面试官提问完毕，激活 ASR 监听用户回答...
+2025-06-10 16:53:05,697 - INFO - 开始写入视频文件: video_records\interview_20250610_165305.mp4, 分辨率: (640, 480), 帧率: 30.00003000003
+2025-06-10 16:53:05,702 - DEBUG - RMS: 0.49, Current dB: -96.54
+2025-06-10 16:53:05,714 - DEBUG - RMS: 0.50, Current dB: -96.36
+2025-06-10 16:53:05,752 - DEBUG - RMS: 0.46, Current dB: -97.13
+2025-06-10 16:53:05,812 - DEBUG - RMS: 0.47, Current dB: -96.83
+2025-06-10 16:53:06,087 - INFO - TTS PyAudio 音频输出流已开启 (Rate: 16000, Format: 8)。
+2025-06-10 16:53:06,092 - DEBUG - RMS: 0.49, Current dB: -96.48
+2025-06-10 16:53:06,151 - DEBUG - RMS: 0.50, Current dB: -96.41
+2025-06-10 16:53:06,212 - DEBUG - RMS: 0.49, Current dB: -96.52
+2025-06-10 16:53:06,281 - DEBUG - RMS: 0.46, Current dB: -97.07
+2025-06-10 16:53:06,342 - DEBUG - RMS: 26.29, Current dB: -61.91
+2025-06-10 16:53:06,413 - DEBUG - RMS: 31.01, Current dB: -60.48
+2025-06-10 16:53:06,471 - DEBUG - RMS: 22.47, Current dB: -63.28
+2025-06-10 16:53:06,532 - DEBUG - RMS: 38.76, Current dB: -58.54
+2025-06-10 16:53:06,602 - DEBUG - RMS: 46.55, Current dB: -56.95
+2025-06-10 16:53:06,661 - DEBUG - RMS: 27.23, Current dB: -61.61
+2025-06-10 16:53:06,732 - DEBUG - RMS: 42.56, Current dB: -57.73
+2025-06-10 16:53:06,791 - DEBUG - RMS: 53.36, Current dB: -55.76
+2025-06-10 16:53:06,852 - DEBUG - RMS: 28.87, Current dB: -61.10
+2025-06-10 16:53:06,922 - INFO - TTS 收到最后一帧音频数据。
+2025-06-10 16:53:06,922 - DEBUG - RMS: 22.92, Current dB: -63.10
+2025-06-10 16:53:06,981 - DEBUG - RMS: 31.50, Current dB: -60.34
+2025-06-10 16:53:07,052 - DEBUG - RMS: 19.75, Current dB: -64.40
+2025-06-10 16:53:07,113 - DEBUG - RMS: 22.86, Current dB: -63.13
+2025-06-10 16:53:07,173 - DEBUG - RMS: 23.54, Current dB: -62.87
+2025-06-10 16:53:07,242 - DEBUG - RMS: 19.61, Current dB: -64.46
+2025-06-10 16:53:07,302 - DEBUG - RMS: 43.32, Current dB: -57.57
+2025-06-10 16:53:07,373 - DEBUG - RMS: 50.37, Current dB: -56.27
+2025-06-10 16:53:07,432 - DEBUG - RMS: 31.24, Current dB: -60.41
+2025-06-10 16:53:07,492 - DEBUG - RMS: 49.99, Current dB: -56.33
+2025-06-10 16:53:07,562 - DEBUG - RMS: 59.45, Current dB: -54.83
+2025-06-10 16:53:07,562 - INFO - 检测到语音活动开始。
+2025-06-10 16:53:07,562 - DEBUG - Sent ASR status=0 frame.
+2025-06-10 16:53:07,622 - DEBUG - RMS: 43.05, Current dB: -57.63
+2025-06-10 16:53:07,692 - DEBUG - RMS: 29.32, Current dB: -60.97
+2025-06-10 16:53:07,752 - DEBUG - RMS: 29.14, Current dB: -61.02
+2025-06-10 16:53:07,812 - DEBUG - RMS: 44.10, Current dB: -57.42
+2025-06-10 16:53:07,881 - DEBUG - RMS: 33.88, Current dB: -59.71
+2025-06-10 16:53:07,941 - DEBUG - RMS: 56.37, Current dB: -55.29
+2025-06-10 16:53:08,012 - DEBUG - RMS: 38.80, Current dB: -58.53
+2025-06-10 16:53:08,071 - DEBUG - RMS: 26.03, Current dB: -62.00
+2025-06-10 16:53:08,132 - DEBUG - RMS: 21.59, Current dB: -63.62
+2025-06-10 16:53:08,201 - DEBUG - RMS: 54.45, Current dB: -55.59
+2025-06-10 16:53:08,262 - DEBUG - RMS: 29.42, Current dB: -60.94
+2025-06-10 16:53:08,332 - DEBUG - RMS: 22.09, Current dB: -63.42
+2025-06-10 16:53:08,392 - DEBUG - RMS: 31.00, Current dB: -60.48
+2025-06-10 16:53:08,452 - DEBUG - RMS: 27.44, Current dB: -61.54
+2025-06-10 16:53:08,522 - DEBUG - RMS: 38.09, Current dB: -58.69
+2025-06-10 16:53:08,582 - DEBUG - RMS: 53.13, Current dB: -55.80
+2025-06-10 16:53:08,652 - DEBUG - RMS: 57.68, Current dB: -55.09
+2025-06-10 16:53:08,713 - DEBUG - RMS: 54.75, Current dB: -55.54
+2025-06-10 16:53:08,772 - DEBUG - RMS: 74.99, Current dB: -52.81
+2025-06-10 16:53:08,809 - ERROR - ASR 服务器返回错误: Code=10107, Message=audioCoding start fail, SID=iat000d56b3@gz197590b14800b51802
+2025-06-10 16:53:08,809 - ERROR - ASR 发生错误: Code=10107, Message=audioCoding start fail
+2025-06-10 16:53:08,809 - INFO - ASR 监听用户回答已关闭。
+2025-06-10 16:53:08,809 - ERROR - 处理 ASR 回调时发生错误: 'XfyunASRClient' object has no attribute 'set_final_result'
+Traceback (most recent call last):
+  File "app.py", line 162, in asr_callback
+    asr_client_instance.set_final_result("") # 错误时也清空结果
+AttributeError: 'XfyunASRClient' object has no attribute 'set_final_result'
+2025-06-10 16:53:08,842 - DEBUG - RMS: 46.05, Current dB: -57.04
+2025-06-10 16:53:08,901 - DEBUG - RMS: 30.91, Current dB: -60.51
+2025-06-10 16:53:08,972 - DEBUG - RMS: 26.40, Current dB: -61.88
+2025-06-10 16:53:09,031 - DEBUG - RMS: 23.05, Current dB: -63.06
+2025-06-10 16:53:09,092 - DEBUG - RMS: 21.50, Current dB: -63.66
+2025-06-10 16:53:09,162 - DEBUG - RMS: 18.16, Current dB: -65.13
+2025-06-10 16:53:09,221 - DEBUG - RMS: 20.82, Current dB: -63.94
+2025-06-10 16:53:09,292 - DEBUG - RMS: 22.69, Current dB: -63.19
+2025-06-10 16:53:09,352 - DEBUG - RMS: 25.24, Current dB: -62.27
+2025-06-10 16:53:09,413 - DEBUG - RMS: 51.59, Current dB: -56.06
+2025-06-10 16:53:09,482 - DEBUG - RMS: 52.55, Current dB: -55.90
+2025-06-10 16:53:09,541 - DEBUG - RMS: 67.81, Current dB: -53.68
+2025-06-10 16:53:09,541 - INFO - 检测到语音活动开始。
+2025-06-10 16:53:09,542 - DEBUG - Sent ASR status=0 frame.
+2025-06-10 16:53:09,613 - DEBUG - RMS: 43.78, Current dB: -57.48
+2025-06-10 16:53:09,671 - DEBUG - RMS: 53.75, Current dB: -55.70
+2025-06-10 16:53:09,733 - DEBUG - RMS: 62.82, Current dB: -54.35
+2025-06-10 16:53:09,733 - INFO - 检测到语音活动开始。
+2025-06-10 16:53:09,733 - DEBUG - Sent ASR status=0 frame.
+2025-06-10 16:53:09,802 - DEBUG - RMS: 70.25, Current dB: -53.38
+2025-06-10 16:53:09,802 - INFO - 检测到语音活动开始。
+2025-06-10 16:53:09,802 - DEBUG - Sent ASR status=0 frame.
+2025-06-10 16:53:09,811 - INFO - 面试官提问完毕，激活 ASR 监听用户回答...
+2025-06-10 16:53:09,861 - DEBUG - RMS: 48.56, Current dB: -56.58
+2025-06-10 16:53:09,932 - DEBUG - RMS: 55.27, Current dB: -55.46
+2025-06-10 16:53:09,992 - DEBUG - RMS: 51.17, Current dB: -56.13
+2025-06-10 16:53:10,053 - DEBUG - RMS: 43.52, Current dB: -57.53
+2025-06-10 16:53:10,122 - DEBUG - RMS: 51.07, Current dB: -56.15
+2025-06-10 16:53:10,181 - DEBUG - RMS: 51.63, Current dB: -56.05
+2025-06-10 16:53:10,252 - DEBUG - RMS: 53.90, Current dB: -55.68
+2025-06-10 16:53:10,313 - DEBUG - RMS: 33.35, Current dB: -59.85
+2025-06-10 16:53:10,372 - DEBUG - RMS: 26.16, Current dB: -61.96
+2025-06-10 16:53:10,442 - DEBUG - RMS: 50.61, Current dB: -56.22
+2025-06-10 16:53:10,501 - DEBUG - RMS: 54.30, Current dB: -55.61
+2025-06-10 16:53:10,572 - DEBUG - RMS: 52.92, Current dB: -55.84
+2025-06-10 16:53:10,632 - DEBUG - RMS: 66.12, Current dB: -53.90
+2025-06-10 16:53:10,692 - DEBUG - RMS: 28.70, Current dB: -61.15
+2025-06-10 16:53:10,761 - DEBUG - RMS: 29.12, Current dB: -61.03
+2025-06-10 16:53:10,821 - DEBUG - RMS: 58.20, Current dB: -55.01
+2025-06-10 16:53:10,892 - DEBUG - RMS: 31.58, Current dB: -60.32
+2025-06-10 16:53:10,952 - DEBUG - RMS: 24.11, Current dB: -62.67
+2025-06-10 16:53:11,012 - DEBUG - RMS: 46.50, Current dB: -56.96
+2025-06-10 16:53:11,082 - DEBUG - RMS: 40.29, Current dB: -58.21
+2025-06-10 16:53:11,141 - DEBUG - RMS: 24.86, Current dB: -62.40
+2025-06-10 16:53:11,212 - DEBUG - RMS: 47.40, Current dB: -56.79
+2025-06-10 16:53:11,272 - DEBUG - RMS: 44.02, Current dB: -57.43
+2025-06-10 16:53:11,332 - DEBUG - RMS: 28.52, Current dB: -61.20
+2025-06-10 16:53:11,401 - DEBUG - RMS: 32.43, Current dB: -60.09
+2025-06-10 16:53:11,461 - DEBUG - RMS: 27.90, Current dB: -61.40
+2025-06-10 16:53:11,532 - DEBUG - RMS: 44.91, Current dB: -57.26
+2025-06-10 16:53:11,591 - DEBUG - RMS: 32.04, Current dB: -60.19
+2025-06-10 16:53:11,653 - DEBUG - RMS: 24.82, Current dB: -62.41
+2025-06-10 16:53:11,722 - DEBUG - RMS: 65.41, Current dB: -54.00
+2025-06-10 16:53:11,781 - DEBUG - RMS: 46.77, Current dB: -56.91
+2025-06-10 16:53:11,852 - DEBUG - RMS: 30.16, Current dB: -60.72
+2025-06-10 16:53:11,913 - DEBUG - RMS: 30.61, Current dB: -60.59
+2025-06-10 16:53:11,973 - DEBUG - RMS: 22.90, Current dB: -63.11
+2025-06-10 16:53:11,989 - INFO - TTS 音频播放完毕。
+2025-06-10 16:53:12,042 - DEBUG - RMS: 19.40, Current dB: -64.55
+2025-06-10 16:53:12,078 - INFO - TTS PyAudio 音频流已关闭。
+2025-06-10 16:53:12,101 - DEBUG - RMS: 20.88, Current dB: -63.92
+2025-06-10 16:53:12,172 - DEBUG - RMS: 19.29, Current dB: -64.60
+2025-06-10 16:53:12,231 - DEBUG - RMS: 21.77, Current dB: -63.55
+2025-06-10 16:53:12,292 - DEBUG - RMS: 22.73, Current dB: -63.18
+2025-06-10 16:53:12,362 - DEBUG - RMS: 18.98, Current dB: -64.74
+2025-06-10 16:53:12,422 - DEBUG - RMS: 17.24, Current dB: -65.58
+2025-06-10 16:53:12,492 - DEBUG - RMS: 20.11, Current dB: -64.24
+2025-06-10 16:53:12,551 - DEBUG - RMS: 23.16, Current dB: -63.01
+2025-06-10 16:53:12,613 - DEBUG - RMS: 19.15, Current dB: -64.66
+2025-06-10 16:53:12,682 - DEBUG - RMS: 17.90, Current dB: -65.25
+2025-06-10 16:53:12,741 - DEBUG - RMS: 21.28, Current dB: -63.75
+2025-06-10 16:53:12,812 - DEBUG - RMS: 27.94, Current dB: -61.39
+2025-06-10 16:53:12,871 - DEBUG - RMS: 25.96, Current dB: -62.02
+2025-06-10 16:53:12,932 - DEBUG - RMS: 24.33, Current dB: -62.59
+2025-06-10 16:53:13,002 - DEBUG - RMS: 37.62, Current dB: -58.80
+2025-06-10 16:53:13,062 - DEBUG - RMS: 32.54, Current dB: -60.06
+2025-06-10 16:53:13,132 - DEBUG - RMS: 61.14, Current dB: -54.58
+F:\软件杯\voice_analyzer.py:121: RuntimeWarning: invalid value encountered in sqrt
+  rms = np.sqrt(np.mean(audio_np**2))
+2025-06-10 16:53:13,192 - DEBUG - RMS: nan, Current dB: nan
+F:\软件杯\voice_analyzer.py:163: RuntimeWarning: invalid value encountered in sqrt
+  rms = np.sqrt(np.mean(audio_np**2) + 1e-10) # 加上一个非常小的数避免0
+2025-06-10 16:53:13,253 - DEBUG - RMS: 14.35, Current dB: -67.17
+2025-06-10 16:53:13,321 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:13,382 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:13,452 - DEBUG - RMS: 41.82, Current dB: -57.88
+2025-06-10 16:53:13,513 - DEBUG - RMS: 50.98, Current dB: -56.16
+2025-06-10 16:53:13,572 - DEBUG - RMS: 19.98, Current dB: -64.30
+2025-06-10 16:53:13,642 - DEBUG - RMS: 13.68, Current dB: -67.59
+2025-06-10 16:53:13,702 - DEBUG - RMS: 22.62, Current dB: -63.22
+2025-06-10 16:53:13,772 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:13,832 - DEBUG - RMS: 32.12, Current dB: -60.17
+2025-06-10 16:53:13,893 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:13,961 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:14,021 - DEBUG - RMS: 28.88, Current dB: -61.10
+2025-06-10 16:53:14,092 - DEBUG - RMS: 23.16, Current dB: -63.01
+2025-06-10 16:53:14,151 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:14,212 - DEBUG - RMS: 50.67, Current dB: -56.21
+2025-06-10 16:53:14,282 - DEBUG - RMS: 69.02, Current dB: -53.53
+2025-06-10 16:53:14,310 - INFO - ASR WebSocket closed.
+2025-06-10 16:53:14,342 - DEBUG - RMS: 49.08, Current dB: -56.49
+2025-06-10 16:53:14,413 - DEBUG - RMS: 19.39, Current dB: -64.56
+2025-06-10 16:53:14,472 - DEBUG - RMS: 36.40, Current dB: -59.09
+2025-06-10 16:53:14,533 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:14,602 - DEBUG - RMS: 26.27, Current dB: -61.92
+2025-06-10 16:53:14,662 - DEBUG - RMS: 46.38, Current dB: -56.98
+2025-06-10 16:53:14,732 - DEBUG - RMS: 10.74, Current dB: -69.69
+2025-06-10 16:53:14,792 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:14,852 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:14,922 - DEBUG - RMS: 32.06, Current dB: -60.19
+2025-06-10 16:53:14,982 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:15,052 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:15,113 - DEBUG - RMS: 43.44, Current dB: -57.55
+2025-06-10 16:53:15,172 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:15,241 - DEBUG - RMS: 26.16, Current dB: -61.96
+2025-06-10 16:53:15,302 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:15,373 - DEBUG - RMS: 17.37, Current dB: -65.51
+2025-06-10 16:53:15,432 - DEBUG - RMS: 21.78, Current dB: -63.55
+2025-06-10 16:53:15,493 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:15,562 - DEBUG - RMS: 42.11, Current dB: -57.82
+2025-06-10 16:53:15,622 - DEBUG - RMS: 25.68, Current dB: -62.12
+2025-06-10 16:53:15,692 - DEBUG - RMS: 20.87, Current dB: -63.92
+2025-06-10 16:53:15,751 - DEBUG - RMS: 33.93, Current dB: -59.70
+2025-06-10 16:53:15,812 - DEBUG - RMS: 15.38, Current dB: -66.57
+2025-06-10 16:53:15,881 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:15,882 - INFO - 检测到静音持续超过 1.5 秒，语音活动结束。
+2025-06-10 16:53:15,882 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:15,942 - DEBUG - RMS: 31.22, Current dB: -60.42
+2025-06-10 16:53:16,012 - DEBUG - RMS: 41.64, Current dB: -57.92
+2025-06-10 16:53:16,072 - DEBUG - RMS: 43.08, Current dB: -57.62
+2025-06-10 16:53:16,132 - DEBUG - RMS: 62.86, Current dB: -54.34
+2025-06-10 16:53:16,132 - INFO - 检测到语音活动开始。
+2025-06-10 16:53:16,132 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:16,132 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:16,202 - DEBUG - RMS: 52.93, Current dB: -55.83
+2025-06-10 16:53:16,262 - DEBUG - RMS: 29.76, Current dB: -60.84
+2025-06-10 16:53:16,332 - DEBUG - RMS: 22.18, Current dB: -63.39
+2025-06-10 16:53:16,392 - DEBUG - RMS: 17.82, Current dB: -65.29
+2025-06-10 16:53:16,453 - DEBUG - RMS: 19.43, Current dB: -64.54
+2025-06-10 16:53:16,521 - DEBUG - RMS: 17.03, Current dB: -65.69
+2025-06-10 16:53:16,582 - DEBUG - RMS: 25.70, Current dB: -62.11
+2025-06-10 16:53:16,653 - DEBUG - RMS: 24.90, Current dB: -62.39
+2025-06-10 16:53:16,713 - DEBUG - RMS: 22.35, Current dB: -63.33
+2025-06-10 16:53:16,772 - DEBUG - RMS: 28.13, Current dB: -61.32
+2025-06-10 16:53:16,842 - DEBUG - RMS: 24.73, Current dB: -62.45
+2025-06-10 16:53:16,902 - DEBUG - RMS: 27.96, Current dB: -61.38
+2025-06-10 16:53:16,972 - DEBUG - RMS: 20.59, Current dB: -64.03
+2025-06-10 16:53:17,032 - DEBUG - RMS: 21.14, Current dB: -63.81
+2025-06-10 16:53:17,092 - DEBUG - RMS: 19.37, Current dB: -64.57
+2025-06-10 16:53:17,162 - DEBUG - RMS: 16.43, Current dB: -65.99
+2025-06-10 16:53:17,221 - DEBUG - RMS: 21.20, Current dB: -63.78
+2025-06-10 16:53:17,292 - DEBUG - RMS: 21.41, Current dB: -63.70
+2025-06-10 16:53:17,352 - DEBUG - RMS: 18.81, Current dB: -64.82
+2025-06-10 16:53:17,413 - DEBUG - RMS: 20.56, Current dB: -64.05
+2025-06-10 16:53:17,482 - DEBUG - RMS: 26.26, Current dB: -61.92
+2025-06-10 16:53:17,542 - DEBUG - RMS: 19.00, Current dB: -64.73
+2025-06-10 16:53:17,613 - DEBUG - RMS: 22.44, Current dB: -63.29
+2025-06-10 16:53:17,672 - DEBUG - RMS: 21.12, Current dB: -63.82
+2025-06-10 16:53:17,732 - DEBUG - RMS: 22.93, Current dB: -63.10
+2025-06-10 16:53:17,732 - INFO - 检测到静音持续超过 1.5 秒，语音活动结束。
+2025-06-10 16:53:17,732 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:17,802 - DEBUG - RMS: 22.87, Current dB: -63.12
+2025-06-10 16:53:17,862 - DEBUG - RMS: 26.17, Current dB: -61.95
+2025-06-10 16:53:17,932 - DEBUG - RMS: 24.10, Current dB: -62.67
+2025-06-10 16:53:17,992 - DEBUG - RMS: 19.30, Current dB: -64.60
+2025-06-10 16:53:18,052 - DEBUG - RMS: 19.50, Current dB: -64.51
+2025-06-10 16:53:18,122 - DEBUG - RMS: 20.70, Current dB: -63.99
+2025-06-10 16:53:18,182 - DEBUG - RMS: 19.51, Current dB: -64.50
+2025-06-10 16:53:18,253 - DEBUG - RMS: 19.84, Current dB: -64.36
+2025-06-10 16:53:18,313 - DEBUG - RMS: 25.00, Current dB: -62.35
+2025-06-10 16:53:18,372 - DEBUG - RMS: 19.56, Current dB: -64.48
+2025-06-10 16:53:18,441 - DEBUG - RMS: 24.40, Current dB: -62.56
+2025-06-10 16:53:18,502 - DEBUG - RMS: 20.15, Current dB: -64.22
+2025-06-10 16:53:18,572 - DEBUG - RMS: 22.10, Current dB: -63.42
+2025-06-10 16:53:18,632 - DEBUG - RMS: 24.87, Current dB: -62.40
+2025-06-10 16:53:18,692 - DEBUG - RMS: 19.74, Current dB: -64.40
+2025-06-10 16:53:18,762 - DEBUG - RMS: 35.54, Current dB: -59.29
+2025-06-10 16:53:18,822 - DEBUG - RMS: 36.77, Current dB: -59.00
+2025-06-10 16:53:18,893 - DEBUG - RMS: 18.01, Current dB: -65.20
+2025-06-10 16:53:18,952 - DEBUG - RMS: 17.35, Current dB: -65.53
+2025-06-10 16:53:19,012 - DEBUG - RMS: 19.18, Current dB: -64.65
+2025-06-10 16:53:19,082 - DEBUG - RMS: 19.00, Current dB: -64.73
+2025-06-10 16:53:19,141 - DEBUG - RMS: 16.07, Current dB: -66.19
+2025-06-10 16:53:19,212 - DEBUG - RMS: 20.85, Current dB: -63.93
+2025-06-10 16:53:19,271 - DEBUG - RMS: 21.83, Current dB: -63.53
+2025-06-10 16:53:19,333 - DEBUG - RMS: 32.37, Current dB: -60.10
+2025-06-10 16:53:19,402 - DEBUG - RMS: 20.63, Current dB: -64.02
+2025-06-10 16:53:19,462 - DEBUG - RMS: 22.81, Current dB: -63.15
+2025-06-10 16:53:19,532 - DEBUG - RMS: 48.13, Current dB: -56.66
+2025-06-10 16:53:19,592 - DEBUG - RMS: 80.93, Current dB: -52.15
+2025-06-10 16:53:19,592 - INFO - 检测到语音活动开始。
+2025-06-10 16:53:19,592 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:19,592 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:19,652 - DEBUG - RMS: 43.47, Current dB: -57.55
+2025-06-10 16:53:19,722 - DEBUG - RMS: 22.62, Current dB: -63.22
+2025-06-10 16:53:19,781 - DEBUG - RMS: 21.36, Current dB: -63.72
+2025-06-10 16:53:19,811 - WARNING - 面试逻辑等待用户回答或Spark回复超时 (10s)。
+2025-06-10 16:53:19,811 - WARNING - 用户未回答或回答超时，ASR 结果为空。
+2025-06-10 16:53:19,811 - INFO - 处理自我介绍...
+2025-06-10 16:53:19,811 - DEBUG - Sending to Spark: [{'role': 'system', 'content': '你现在是一个严谨且专业的AI面试官，你的任务是与用户进行一次结构化的模拟面试。每次提问后，请等待用户的回答，然后根据用户的回答给出简要评价，并提出下一个问题。请确保你的问题逻辑连贯，并能逐步深入了解用户的能力。在面试结束时，请礼貌地结束面试并表示感谢。'}, {'role': 'user', 'content': '[用户未回答]'}, {'role': 'user', 'content': "用户进行了自我介绍。请你以面试官的身份，简要评价该自我介绍，并提出第一个正式的面试问题，问题内容为：'请您详细介绍一下您在某个项目中使用Python进行数据分析的经验，包括您使用的库、遇到的挑战以及如何解决的。'"}]
+2025-06-10 16:53:19,811 - DEBUG - 发送到星火大模型的请求: {"header": {"app_id": "ONamSSewOPIZPYijlDEl", "api_key": "ONamSSewOPIZPYijlDEl", "api_secret": "KQzwHmytwjcZhgzbfDvi"}, "parameter": {"chat": {"domain": "x1", "temperature": 0.7, "max_tokens": 2048}}, "payload": {"message": {"text": [{"role": "system", "content": "你现在是一个严谨且专业的AI面试官，你的任务是与用户进行一次结构化的模拟面试。每次提问后，请等待用户的回答，然后根据用户的回答给出简要评价，并提出下一个问题。 请确保你的问题逻辑连贯，并能逐步深入了解用户的能力。在面试结束时，请礼貌地结束面试并表示感谢。"}, {"role": "user", "content": "[用户未回答]"}, {"role": "user", "content": "用户进行了自我介绍。请你以面试官的身份，简要评价该自我介绍，并提出第一个正式的面试问题，问题内容为：'请您详细介绍一下您在某个项目中使用Python进行数 据分析的经验，包括您使用的库、遇到的挑战以及如何解决的。'"}]}}}
+2025-06-10 16:53:19,818 - DEBUG - Starting new HTTPS connection (1): spark-api-open.xf-yun.com:443
+2025-06-10 16:53:19,853 - DEBUG - RMS: 31.37, Current dB: -60.38
+2025-06-10 16:53:19,913 - DEBUG - RMS: 21.58, Current dB: -63.63
+2025-06-10 16:53:19,973 - DEBUG - RMS: 20.45, Current dB: -64.09
+2025-06-10 16:53:20,003 - DEBUG - https://spark-api-open.xf-yun.com:443 "POST /v2/chat/completions HTTP/11" 401 26
+2025-06-10 16:53:20,004 - ERROR - 请求发生网络或HTTP错误: 401 Client Error: Unauthorized for url: https://spark-api-open.xf-yun.com/v2/chat/completions
+2025-06-10 16:53:20,004 - ERROR - 原始响应文本: {"message":"Unauthorized"}
+2025-06-10 16:53:20,004 - WARNING - 未能从 Spark 模型获取回复。
+2025-06-10 16:53:20,004 - INFO - ASR 监听用户回答已关闭。
+2025-06-10 16:53:20,042 - DEBUG - RMS: 27.62, Current dB: -61.48
+2025-06-10 16:53:20,101 - DEBUG - RMS: 22.02, Current dB: -63.45
+2025-06-10 16:53:20,173 - DEBUG - RMS: 21.55, Current dB: -63.64
+2025-06-10 16:53:20,232 - DEBUG - RMS: 22.06, Current dB: -63.43
+2025-06-10 16:53:20,293 - DEBUG - RMS: 23.10, Current dB: -63.04
+2025-06-10 16:53:20,362 - DEBUG - RMS: 24.88, Current dB: -62.39
+2025-06-10 16:53:20,421 - DEBUG - RMS: 23.54, Current dB: -62.87
+2025-06-10 16:53:20,493 - DEBUG - RMS: 22.57, Current dB: -63.24
+2025-06-10 16:53:20,552 - DEBUG - RMS: 25.05, Current dB: -62.33
+2025-06-10 16:53:20,613 - DEBUG - RMS: 28.84, Current dB: -61.11
+2025-06-10 16:53:20,681 - DEBUG - RMS: 26.00, Current dB: -62.01
+2025-06-10 16:53:20,741 - DEBUG - RMS: 21.01, Current dB: -63.86
+2025-06-10 16:53:20,812 - DEBUG - RMS: 53.25, Current dB: -55.78
+2025-06-10 16:53:20,871 - DEBUG - RMS: 60.90, Current dB: -54.62
+2025-06-10 16:53:20,872 - INFO - 检测到语音活动开始。
+2025-06-10 16:53:20,872 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:20,872 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:20,932 - DEBUG - RMS: 32.64, Current dB: -60.03
+2025-06-10 16:53:21,002 - DEBUG - RMS: 51.33, Current dB: -56.10
+2025-06-10 16:53:21,006 - INFO - 面试官提问完毕，激活 ASR 监听用户回答...
+2025-06-10 16:53:21,061 - DEBUG - RMS: 60.50, Current dB: -54.67
+2025-06-10 16:53:21,062 - INFO - 检测到语音活动开始。
+2025-06-10 16:53:21,062 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:21,062 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:21,133 - DEBUG - RMS: 51.92, Current dB: -56.00
+2025-06-10 16:53:21,192 - DEBUG - RMS: 64.55, Current dB: -54.11
+2025-06-10 16:53:21,192 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:21,252 - DEBUG - RMS: 48.79, Current dB: -56.54
+2025-06-10 16:53:21,322 - DEBUG - RMS: 31.18, Current dB: -60.43
+2025-06-10 16:53:21,382 - DEBUG - RMS: 52.29, Current dB: -55.94
+2025-06-10 16:53:21,452 - DEBUG - RMS: 47.42, Current dB: -56.79
+2025-06-10 16:53:21,513 - DEBUG - RMS: 62.41, Current dB: -54.40
+2025-06-10 16:53:21,513 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:21,572 - DEBUG - RMS: 54.51, Current dB: -55.58
+2025-06-10 16:53:21,641 - DEBUG - RMS: 63.84, Current dB: -54.21
+2025-06-10 16:53:21,641 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:21,701 - DEBUG - RMS: 24.19, Current dB: -62.64
+2025-06-10 16:53:21,772 - DEBUG - RMS: 27.69, Current dB: -61.46
+2025-06-10 16:53:21,831 - DEBUG - RMS: 25.74, Current dB: -62.10
+2025-06-10 16:53:21,893 - DEBUG - RMS: 41.39, Current dB: -57.97
+2025-06-10 16:53:21,962 - DEBUG - RMS: 20.95, Current dB: -63.88
+2025-06-10 16:53:22,021 - DEBUG - RMS: 36.61, Current dB: -59.04
+2025-06-10 16:53:22,092 - DEBUG - RMS: 42.65, Current dB: -57.71
+2025-06-10 16:53:22,152 - DEBUG - RMS: 55.21, Current dB: -55.47
+2025-06-10 16:53:22,212 - DEBUG - RMS: 48.78, Current dB: -56.54
+2025-06-10 16:53:22,282 - DEBUG - RMS: 43.77, Current dB: -57.49
+2025-06-10 16:53:22,282 - INFO - TTS WebSocket 连接已关闭。
+2025-06-10 16:53:22,341 - DEBUG - RMS: 22.05, Current dB: -63.44
+2025-06-10 16:53:22,412 - DEBUG - RMS: 55.22, Current dB: -55.47
+2025-06-10 16:53:22,472 - DEBUG - RMS: 53.52, Current dB: -55.74
+2025-06-10 16:53:22,532 - DEBUG - RMS: 46.46, Current dB: -56.97
+2025-06-10 16:53:22,602 - DEBUG - RMS: 43.70, Current dB: -57.50
+2025-06-10 16:53:22,662 - DEBUG - RMS: 48.32, Current dB: -56.63
+2025-06-10 16:53:22,732 - DEBUG - RMS: 34.37, Current dB: -59.59
+2025-06-10 16:53:22,792 - DEBUG - RMS: 29.72, Current dB: -60.85
+2025-06-10 16:53:22,852 - DEBUG - RMS: 25.93, Current dB: -62.03
+2025-06-10 16:53:22,922 - DEBUG - RMS: 23.72, Current dB: -62.81
+2025-06-10 16:53:22,981 - DEBUG - RMS: 21.18, Current dB: -63.79
+2025-06-10 16:53:23,052 - DEBUG - RMS: 21.01, Current dB: -63.86
+2025-06-10 16:53:23,112 - DEBUG - RMS: 21.07, Current dB: -63.84
+2025-06-10 16:53:23,172 - DEBUG - RMS: 28.35, Current dB: -61.26
+2025-06-10 16:53:23,241 - DEBUG - RMS: 19.75, Current dB: -64.40
+2025-06-10 16:53:23,242 - INFO - 检测到静音持续超过 1.5 秒，语音活动结束。
+2025-06-10 16:53:23,242 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:23,301 - DEBUG - RMS: 20.66, Current dB: -64.01
+2025-06-10 16:53:23,372 - DEBUG - RMS: 20.84, Current dB: -63.93
+2025-06-10 16:53:23,431 - DEBUG - RMS: 23.83, Current dB: -62.77
+2025-06-10 16:53:23,492 - DEBUG - RMS: 18.45, Current dB: -64.99
+2025-06-10 16:53:23,561 - DEBUG - RMS: 27.43, Current dB: -61.54
+2025-06-10 16:53:23,621 - DEBUG - RMS: 21.12, Current dB: -63.81
+2025-06-10 16:53:23,693 - DEBUG - RMS: 25.59, Current dB: -62.15
+2025-06-10 16:53:23,751 - DEBUG - RMS: 24.14, Current dB: -62.65
+2025-06-10 16:53:23,812 - DEBUG - RMS: 23.77, Current dB: -62.79
+2025-06-10 16:53:23,882 - DEBUG - RMS: 29.03, Current dB: -61.05
+2025-06-10 16:53:23,942 - DEBUG - RMS: 26.38, Current dB: -61.88
+2025-06-10 16:53:24,012 - DEBUG - RMS: 27.10, Current dB: -61.65
+2025-06-10 16:53:24,071 - DEBUG - RMS: 25.08, Current dB: -62.32
+2025-06-10 16:53:24,132 - DEBUG - RMS: 26.69, Current dB: -61.78
+2025-06-10 16:53:24,201 - DEBUG - RMS: 32.78, Current dB: -60.00
+2025-06-10 16:53:24,262 - DEBUG - RMS: 46.44, Current dB: -56.97
+2025-06-10 16:53:24,332 - DEBUG - RMS: 53.53, Current dB: -55.74
+2025-06-10 16:53:24,392 - DEBUG - RMS: 22.98, Current dB: -63.08
+2025-06-10 16:53:24,452 - DEBUG - RMS: 18.84, Current dB: -64.81
+2025-06-10 16:53:24,522 - DEBUG - RMS: 21.16, Current dB: -63.80
+2025-06-10 16:53:24,581 - DEBUG - RMS: 23.71, Current dB: -62.81
+2025-06-10 16:53:24,652 - DEBUG - RMS: 29.85, Current dB: -60.81
+2025-06-10 16:53:24,713 - DEBUG - RMS: 34.29, Current dB: -59.61
+2025-06-10 16:53:24,772 - DEBUG - RMS: 24.14, Current dB: -62.65
+2025-06-10 16:53:24,841 - DEBUG - RMS: 22.67, Current dB: -63.20
+2025-06-10 16:53:24,901 - DEBUG - RMS: 35.26, Current dB: -59.36
+2025-06-10 16:53:24,972 - DEBUG - RMS: 25.62, Current dB: -62.14
+2025-06-10 16:53:25,032 - DEBUG - RMS: 21.52, Current dB: -63.65
+2025-06-10 16:53:25,092 - DEBUG - RMS: 76.68, Current dB: -52.61
+2025-06-10 16:53:25,092 - INFO - 检测到语音活动开始。
+2025-06-10 16:53:25,093 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:25,093 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:25,162 - DEBUG - RMS: 79.98, Current dB: -52.25
+2025-06-10 16:53:25,162 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:25,222 - DEBUG - RMS: 85.58, Current dB: -51.66
+2025-06-10 16:53:25,222 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:25,292 - DEBUG - RMS: 63.89, Current dB: -54.20
+2025-06-10 16:53:25,293 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:25,351 - DEBUG - RMS: 56.69, Current dB: -55.24
+2025-06-10 16:53:25,412 - DEBUG - RMS: 65.77, Current dB: -53.95
+2025-06-10 16:53:25,412 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:25,481 - DEBUG - RMS: 59.71, Current dB: -54.79
+2025-06-10 16:53:25,481 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:25,542 - DEBUG - RMS: 37.52, Current dB: -58.82
+2025-06-10 16:53:25,613 - DEBUG - RMS: 30.75, Current dB: -60.55
+2025-06-10 16:53:25,671 - DEBUG - RMS: 46.08, Current dB: -57.04
+2025-06-10 16:53:25,732 - DEBUG - RMS: 38.17, Current dB: -58.68
+2025-06-10 16:53:25,801 - DEBUG - RMS: 40.16, Current dB: -58.23
+2025-06-10 16:53:25,861 - DEBUG - RMS: 28.68, Current dB: -61.16
+2025-06-10 16:53:25,933 - DEBUG - RMS: 23.81, Current dB: -62.77
+2025-06-10 16:53:25,992 - DEBUG - RMS: 23.65, Current dB: -62.83
+2025-06-10 16:53:26,052 - DEBUG - RMS: 23.66, Current dB: -62.83
+2025-06-10 16:53:26,121 - DEBUG - RMS: 32.85, Current dB: -59.98
+2025-06-10 16:53:26,182 - DEBUG - RMS: 28.21, Current dB: -61.30
+2025-06-10 16:53:26,252 - DEBUG - RMS: 20.19, Current dB: -64.21
+2025-06-10 16:53:26,314 - DEBUG - RMS: 24.62, Current dB: -62.48
+2025-06-10 16:53:26,372 - DEBUG - RMS: 22.01, Current dB: -63.46
+2025-06-10 16:53:26,441 - DEBUG - RMS: 31.05, Current dB: -60.47
+2025-06-10 16:53:26,502 - DEBUG - RMS: 29.85, Current dB: -60.81
+2025-06-10 16:53:26,573 - DEBUG - RMS: 27.79, Current dB: -61.43
+2025-06-10 16:53:26,632 - DEBUG - RMS: 31.38, Current dB: -60.37
+2025-06-10 16:53:26,692 - DEBUG - RMS: 29.63, Current dB: -60.87
+2025-06-10 16:53:26,761 - DEBUG - RMS: 26.82, Current dB: -61.74
+2025-06-10 16:53:26,822 - DEBUG - RMS: 27.41, Current dB: -61.55
+2025-06-10 16:53:26,892 - DEBUG - RMS: 32.22, Current dB: -60.15
+2025-06-10 16:53:26,952 - DEBUG - RMS: 25.18, Current dB: -62.29
+2025-06-10 16:53:27,012 - DEBUG - RMS: 26.85, Current dB: -61.73
+2025-06-10 16:53:27,082 - DEBUG - RMS: 29.89, Current dB: -60.80
+2025-06-10 16:53:27,082 - INFO - 检测到静音持续超过 1.5 秒，语音活动结束。
+2025-06-10 16:53:27,082 - WARNING - ASR 客户端未连接，无法发送音频数据。
+2025-06-10 16:53:27,142 - DEBUG - RMS: 27.19, Current dB: -61.62
+2025-06-10 16:53:27,212 - DEBUG - RMS: 30.38, Current dB: -60.66
+2025-06-10 16:53:27,272 - DEBUG - RMS: 21.54, Current dB: -63.64
+2025-06-10 16:53:27,333 - DEBUG - RMS: 22.37, Current dB: -63.32
+2025-06-10 16:53:27,402 - DEBUG - RMS: 31.54, Current dB: -60.33
+2025-06-10 16:53:27,462 - DEBUG - RMS: 38.80, Current dB: -58.53
+2025-06-10 16:53:27,532 - DEBUG - RMS: 30.01, Current dB: -60.76
+2025-06-10 16:53:27,592 - DEBUG - RMS: 24.31, Current dB: -62.59
+2025-06-10 16:53:27,652 - DEBUG - RMS: 29.12, Current dB: -61.03
+2025-06-10 16:53:27,721 - DEBUG - RMS: 25.18, Current dB: -62.29
+2025-06-10 16:53:27,781 - DEBUG - RMS: 28.84, Current dB: -61.11
+2025-06-10 16:53:27,852 - DEBUG - RMS: 22.70, Current dB: -63.19
+2025-06-10 16:53:27,913 - DEBUG - RMS: 22.21, Current dB: -63.38
+2025-06-10 16:53:27,973 - DEBUG - RMS: 22.22, Current dB: -63.37
+2025-06-10 16:53:28,041 - DEBUG - RMS: 23.43, Current dB: -62.91
+2025-06-10 16:53:28,101 - DEBUG - RMS: 22.71, Current dB: -63.18
+2025-06-10 16:53:28,173 - DEBUG - RMS: 24.11, Current dB: -62.66
+2025-06-10 16:53:28,232 - DEBUG - RMS: 24.31, Current dB: -62.59
+2025-06-10 16:53:28,292 - DEBUG - RMS: 23.60, Current dB: -62.85
+2025-06-10 16:53:28,362 - DEBUG - RMS: 26.97, Current dB: -61.69
+2025-06-10 16:53:28,421 - DEBUG - RMS: 22.26, Current dB: -63.36
+2025-06-10 16:53:28,492 - DEBUG - RMS: 18.58, Current dB: -64.93
+2025-06-10 16:53:28,552 - DEBUG - RMS: 22.93, Current dB: -63.10
+2025-06-10 16:53:28,612 - DEBUG - RMS: 27.65, Current dB: -61.47
+2025-06-10 16:53:28,681 - DEBUG - RMS: 23.38, Current dB: -62.93
+2025-06-10 16:53:28,742 - DEBUG - RMS: 23.92, Current dB: -62.73
+2025-06-10 16:53:28,812 - DEBUG - RMS: 22.90, Current dB: -63.11
+2025-06-10 16:53:28,872 - DEBUG - RMS: 23.23, Current dB: -62.99
+2025-06-10 16:53:28,932 - DEBUG - RMS: 20.27, Current dB: -64.17
+2025-06-10 16:53:29,002 - DEBUG - RMS: 20.76, Current dB: -63.96
+2025-06-10 16:53:29,061 - DEBUG - RMS: 21.50, Current dB: -63.66
+2025-06-10 16:53:29,132 - DEBUG - RMS: 25.80, Current dB: -62.08
+2025-06-10 16:53:29,192 - DEBUG - RMS: 22.87, Current dB: -63.12
+2025-06-10 16:53:29,253 - DEBUG - RMS: 21.65, Current dB: -63.60
+2025-06-10 16:53:29,322 - DEBUG - RMS: 21.20, Current dB: -63.78
+2025-06-10 16:53:29,382 - DEBUG - RMS: 21.50, Current dB: -63.66
+2025-06-10 16:53:29,452 - DEBUG - RMS: 23.39, Current dB: -62.93
+2025-06-10 16:53:29,513 - DEBUG - RMS: 27.39, Current dB: -61.56
+2025-06-10 16:53:29,572 - DEBUG - RMS: 19.33, Current dB: -64.59
+2025-06-10 16:53:29,642 - DEBUG - RMS: 25.15, Current dB: -62.30
+2025-06-10 16:53:29,702 - DEBUG - RMS: 19.09, Current dB: -64.69
+2025-06-10 16:53:29,773 - DEBUG - RMS: 18.50, Current dB: -64.96
+2025-06-10 16:53:29,832 - DEBUG - RMS: 21.86, Current dB: -63.51
+2025-06-10 16:53:29,892 - DEBUG - RMS: 20.67, Current dB: -64.00
+2025-06-10 16:53:29,962 - DEBUG - RMS: 24.65, Current dB: -62.47
+2025-06-10 16:53:30,022 - DEBUG - RMS: 34.34, Current dB: -59.59
+2025-06-10 16:53:30,092 - DEBUG - RMS: 30.88, Current dB: -60.51
+2025-06-10 16:53:30,152 - DEBUG - RMS: 23.58, Current dB: -62.86
+2025-06-10 16:53:30,212 - DEBUG - RMS: 26.01, Current dB: -62.01
+2025-06-10 16:53:30,281 - DEBUG - RMS: 36.12, Current dB: -59.15
+2025-06-10 16:53:30,342 - DEBUG - RMS: 24.57, Current dB: -62.50
+2025-06-10 16:53:30,412 - DEBUG - RMS: 26.51, Current dB: -61.84
+2025-06-10 16:53:30,472 - DEBUG - RMS: 26.08, Current dB: -61.98
+2025-06-10 16:53:30,532 - DEBUG - RMS: 22.77, Current dB: -63.16
+2025-06-10 16:53:30,602 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:30,662 - DEBUG - RMS: 26.78, Current dB: -61.75
+2025-06-10 16:53:30,733 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:30,792 - DEBUG - RMS: 55.76, Current dB: -55.38
+2025-06-10 16:53:30,852 - DEBUG - RMS: 27.75, Current dB: -61.44
+2025-06-10 16:53:30,921 - DEBUG - RMS: 15.45, Current dB: -66.53
+2025-06-10 16:53:30,981 - DEBUG - RMS: 20.16, Current dB: -64.22
+2025-06-10 16:53:31,006 - WARNING - 面试逻辑等待用户回答或Spark回复超时 (10s)。
+2025-06-10 16:53:31,006 - WARNING - 用户未回答或回答超时，ASR 结果为空。
+2025-06-10 16:53:31,006 - INFO - 处理用户回答...
+2025-06-10 16:53:31,006 - DEBUG - Sending to Spark: [{'role': 'system', 'content': '你现在是一个严谨且专业的AI面试官，你的任务是与用户进行一次结构化的模拟面试。每次提问后，请等待用户的回答，然后根据用户的回答给出简要评价，并提出下一个问题。请确保你的问题逻辑连贯，并能逐步深入了解用户的能力。在面试结束时，请礼貌地结束面试并表示感谢。'}, {'role': 'user', 'content': '[用户未回答]'}, {'role': 'user', 'content': '[用户未回答]'}, {'role': 'user', 'content': "针对面试问题：'您对人工智能的未来发展有什么看法？您认为它将如何改变我们的生活和工作方式？'，用户回答完毕。请你以面试官的身份，简要评价该回答，并提出后续问题：'请描述一次您在团队项目中遇到的冲突，您是如何处理这次冲突的？从中您学到了什么？'"}]
+2025-06-10 16:53:31,007 - DEBUG - 发送到星火大模型的请求: {"header": {"app_id": "ONamSSewOPIZPYijlDEl", "api_key": "ONamSSewOPIZPYijlDEl", "api_secret": "KQzwHmytwjcZhgzbfDvi"}, "parameter": {"chat": {"domain": "x1", "temperature": 0.7, "max_tokens": 2048}}, "payload": {"message": {"text": [{"role": "system", "content": "你现在是一个严谨且专业的AI面试官，你的任务是与用户进行一次结构化的模拟面试。每次提问后，请等待用户的回答，然后根据用户的回答给出简要评价，并提出下一个问题。 请确保你的问题逻辑连贯，并能逐步深入了解用户的能力。在面试结束时，请礼貌地结束面试并表示感谢。"}, {"role": "user", "content": "[用户未回答]"}, {"role": "user", "content": "[用户未回答]"}, {"role": "user", "content": "针对面试问题：'您对人工智能的未来发展有什么看法？您认为它将如何改变我们的生活和工作方式？'，用户回答完 毕。请你以面试官的身份，简要评价该回答，并提出后续问题：'请描述一次您在团队项目中遇到的冲突，您是如何处理这次冲突的？从中您学到了什么？'"}]}}}
+2025-06-10 16:53:31,008 - DEBUG - Starting new HTTPS connection (1): spark-api-open.xf-yun.com:443
+2025-06-10 16:53:31,052 - DEBUG - RMS: 26.13, Current dB: -61.97
+2025-06-10 16:53:31,083 - DEBUG - https://spark-api-open.xf-yun.com:443 "POST /v2/chat/completions HTTP/11" 401 26
+2025-06-10 16:53:31,083 - ERROR - 请求发生网络或HTTP错误: 401 Client Error: Unauthorized for url: https://spark-api-open.xf-yun.com/v2/chat/completions
+2025-06-10 16:53:31,083 - ERROR - 原始响应文本: {"message":"Unauthorized"}
+2025-06-10 16:53:31,083 - WARNING - 未能从 Spark 模型获取回复。
+2025-06-10 16:53:31,083 - INFO - ASR 监听用户回答已关闭。
+2025-06-10 16:53:31,113 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:31,172 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:31,242 - DEBUG - RMS: 14.23, Current dB: -67.24
+2025-06-10 16:53:31,302 - DEBUG - RMS: 36.07, Current dB: -59.17
+2025-06-10 16:53:31,372 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:31,432 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:31,493 - DEBUG - RMS: 18.13, Current dB: -65.14
+2025-06-10 16:53:31,562 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:31,622 - DEBUG - RMS: 49.39, Current dB: -56.44
+2025-06-10 16:53:31,692 - DEBUG - RMS: 45.38, Current dB: -57.17
+2025-06-10 16:53:31,752 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:31,813 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:31,882 - DEBUG - RMS: 7.42, Current dB: -72.90
+2025-06-10 16:53:31,942 - DEBUG - RMS: 23.66, Current dB: -62.83
+2025-06-10 16:53:32,012 - DEBUG - RMS: 23.43, Current dB: -62.91
+2025-06-10 16:53:32,071 - DEBUG - RMS: 24.45, Current dB: -62.54
+2025-06-10 16:53:32,085 - INFO - 面试官：感谢您的参与，本次面试结束。祝您一切顺利！
+2025-06-10 16:53:32,085 - INFO - 请求 TTS 合成文本: '感谢您的参与，本次面试结束。祝您一切顺利！'
+2025-06-10 16:53:32,085 - INFO - 开始合成文本: '感谢您的参与，本次面试结束。祝您一切顺利！'
+2025-06-10 16:53:32,085 - INFO - 正在尝试连接 TTS WebSocket...
+2025-06-10 16:53:32,132 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:32,165 - INFO - Websocket connected
+2025-06-10 16:53:32,166 - INFO - TTS WebSocket 连接已打开。
+2025-06-10 16:53:32,187 - INFO - TTS WebSocket 连接成功。
+2025-06-10 16:53:32,187 - INFO - TTS 文本合成请求已发送。
+2025-06-10 16:53:32,187 - INFO - TTS 播放完成。
+2025-06-10 16:53:32,187 - INFO - 面试流程结束。
+2025-06-10 16:53:32,201 - DEBUG - RMS: nan, Current dB: nan
+2025-06-10 16:53:32,261 - DEBUG - RMS: 5.09, Current dB: -76.18
+2025-06-10 16:53:32,541 - DEBUG - RMS: 12.70, Current dB: -68.23
+2025-06-10 16:53:32,542 - INFO - TTS PyAudio 音频输出流已开启 (Rate: 16000, Format: 8)。
+2025-06-10 16:53:32,593 - DEBUG - RMS: 17.14, Current dB: -65.63
+2025-06-10 16:53:32,652 - DEBUG - RMS: 21.84, Current dB: -63.53
+2025-06-10 16:53:32,712 - WARNING - 面试逻辑线程已停止。面试流程已结束，主程序将退出。
+2025-06-10 16:53:32,712 - INFO - 程序即将关闭，正在清理资源...
+2025-06-10 16:53:32,722 - DEBUG - RMS: 27.07, Current dB: -61.66
+2025-06-10 16:53:32,729 - INFO - ASR 结果处理线程停止。
+2025-06-10 16:53:32,734 - INFO - 音频输入线程停止。
+2025-06-10 16:53:33,562 - INFO - TTS 收到最后一帧音频数据。
+2025-06-10 16:53:34,727 - INFO - PyAudio 音频输入流已关闭。
+2025-06-10 16:53:34,727 - INFO - PyAudio 资源已释放。
+2025-06-10 16:53:34,727 - INFO - Closing ASR WebSocket...
+Traceback (most recent call last):
+  File "app.py", line 386, in <module>
+    main_loop()
+  File "app.py", line 371, in main_loop
+    asr_client.close()
+  File "F:\软件杯\xfyun_asr_client.py", line 282, in close
+    if self.ws and self.ws.connected:
+AttributeError: 'WebSocketApp' object has no attribute 'connected'

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>多模态面试评测智能体</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>多模态面试评测智能体</h1>
+        <div class="interview-section">
+            <div class="ai-question">
+                <label>AI提问：</label>
+                <div id="ai-question-text">点击"开始面试"后AI将提问</div>
+            </div>
+            <div class="user-answer">
+                <label>用户回答（ASR实时识别）：</label>
+                <div id="user-answer-text">等待识别...</div>
+            </div>
+            <div class="ai-feedback">
+                <label>AI评价：</label>
+                <div id="ai-feedback-text">等待AI评价...</div>
+            </div>
+            <div class="interview-controls">
+                <button id="start-btn">开始面试</button>
+                <button id="next-btn" disabled>下一题</button>
+                <button id="stop-btn" disabled>结束面试</button>
+            </div>
+        </div>
+        <div class="video-section">
+            <label>录像预览：</label>
+            <video id="video-preview" width="320" height="240" autoplay muted></video>
+            <div>
+                <button id="start-record-btn">开始录像</button>
+                <button id="stop-record-btn" disabled>停止录像</button>
+                <a id="download-link" style="display:none;" download="interview_video.webm">下载录像</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+# Web 框架和服务器
+Flask
+Flask-SocketIO
+fastapi
+uvicorn
+
+# AI 和数据处理
+numpy
+pandas
+scipy
+matplotlib
+scikit-learn
+opencv-python
+opencv-contrib-python
+mediapipe
+librosa
+soundfile
+transformers
+onnxruntime
+openai
+sentencepiece
+tokenizers
+safetensors
+jax
+jaxlib
+
+# 音频处理
+PyAudio
+pydub
+sounddevice
+audioread
+espeakng-loader
+phonemizer-fork
+
+# 图形和界面
+moderngl
+moderngl-window
+gradio
+ManimPango
+pyglet
+pyglm
+screeninfo
+
+# 数据库和网络
+PyMySQL
+requests
+websockets
+aiohttp
+
+# 其它工具
+python-docx
+python-dotenv
+beautifulsoup4
+lxml
+tqdm
+# 下面这些根据你实际用到的功能可选
+# twilio
+# selenium
+# qiskit
+# watchdog
